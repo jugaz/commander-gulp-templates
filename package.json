@@ -1,0 +1,65 @@
+{
+  "name": "commander-gulp-templates",
+  "version": "1.0.0",
+  "description": "This project is created to compile html",
+  "keywords": [
+    "build",
+    "commander pug",
+    "commander templates",
+    "commander",
+    "compile",
+    "gulp pug",
+    "gulp templates",
+    "gulp-pug",
+    "gulp-templates",
+    "npm pug",
+    "npm templates",
+    "pug",
+    "task html"
+  ],
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "chalk": "^4.1.0",
+    "commander": "^3.0.2",
+    "commander-gulp-images": "git+https://github.com/jugaz/commander-gulp-images.git",
+    "commander-gulp-server":"git+https://github.com/jugaz/commander-gulp-server.git",
+    "commander-gulp-styles": "git+https://github.com/jugaz/commander-gulp-styles.git",
+    "commander-gulp-watch":"git+https://github.com/jugaz/commander-gulp-watch.git",
+    "figlet": "^1.5.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-util": "^3.0.8",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.1"
+  },
+  "bin": {
+    "commander-gulp-templates": "bin/templates.js"
+  },
+  "scripts": {
+    "deploy": "npm run templates && npm run styles && npm run images && npm run svg && gulp scripts",
+    "images": "commander-gulp-images images \"frontend/src/static/images/**/*.png\" \"frontend/src/static/images/**/*.jpg\" --im \"docs/images\"",
+    "predeploy": "rm -rdf \"docs/\" && mkdir -p \"docs/\"",
+    "preinstall": "node bin/pre-cli-templates.js",
+    "styles": "commander-gulp-styles scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles\"",
+    "svg": "commander-gulp-images svg \"frontend/src/static/images/**/*.svg\" --sv \"docs/images/\"",
+    "templates": "node ./bin/templates.js templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\" --t \"docs/\"",
+    "watch": "npm run watch-templates watch-styles",
+    "watch-templates": "commander-gulp-watch w-templates \"frontend/src/templates/*.pug\"  \"frontend/src/templates/**/*.pug\" --wt \"docs/\"",
+    "watch-sass": "commander-gulp-watch w-scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --wscss \"docs/styles/\"",
+    "watch-stylus": "commander-gulp-watch w-stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --wstyl \"docs/styles/\""
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jugaz/commander-gulp-templates.git"
+  },
+  "author": "Jesús Antonio Ugaz Vegas",
+  "email":"jesusugazv@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jugaz/commander-gulp-templates/issues"
+  },
+  "homepage": "https://github.com/jugaz/commander-gulp-templates#readme"
+}
