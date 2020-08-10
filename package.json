@@ -2,21 +2,13 @@
   "name": "commander-gulp-templates",
   "version": "1.0.0",
   "description": "This project is created to compile html",
-  "keywords": [
-    "build",
-    "commander pug",
-    "commander templates",
-    "commander",
-    "compile",
-    "gulp pug",
-    "gulp templates",
-    "gulp-pug",
-    "gulp-templates",
-    "npm pug",
-    "npm templates",
-    "pug",
-    "task html"
-  ],
+  "main": "./bin/server.js",
+  "author": "Jesús Antonio Ugaz Vegas",
+  "email":"jesusugazv@gmail.com",
+  "license": "ISC",
+  "bin": {
+    "commander-gulp-templates": "bin/templates.js"
+  },
   "dependencies": {
     "browser-sync": "^2.26.7",
     "chalk": "^4.1.0",
@@ -34,9 +26,6 @@
     "mkdirp": "^0.5.1",
     "rimraf": "^3.0.1"
   },
-  "bin": {
-    "commander-gulp-templates": "bin/templates.js"
-  },
   "scripts": {
     "deploy": "npm run templates && npm run styles && npm run images && npm run svg && gulp scripts",
     "images": "commander-gulp-images images \"frontend/src/static/images/**/*.png\" \"frontend/src/static/images/**/*.jpg\" --im \"docs/images\"",
@@ -51,14 +40,14 @@
     "watch-stylus": "commander-gulp-watch w-stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --wstyl \"docs/styles/\""
   },
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
-  
+  "directories": {
+    "doc": "docs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jugaz/commander-gulp-templates.git"
   },
-  "author": "Jesús Antonio Ugaz Vegas",
-  "email":"jesusugazv@gmail.com",
-  "license": "ISC",
+ 
   "bugs": {
     "url": "https://github.com/jugaz/commander-gulp-templates/issues"
   },
