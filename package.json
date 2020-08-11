@@ -46,6 +46,13 @@
     "type": "git",
     "url": "git+https://github.com/jugaz/commander-gulp-templates.git"
   },
+  "keywords": [
+    "templates",
+    "html",
+    "gulp",
+    "commander-gulp-templates",
+    "commander"
+  ],
  
   "bugs": {
     "url": "https://github.com/jugaz/commander-gulp-templates/issues"
