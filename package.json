@@ -39,8 +39,6 @@
     "watch-sass": "commander-gulp-watch w-scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --wscss \"docs/styles/\"",
     "watch-stylus": "commander-gulp-watch w-stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --wstyl \"docs/styles/\""
   },
-
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "directories": {
     "doc": "docs"
   },
