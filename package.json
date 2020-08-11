@@ -7,7 +7,7 @@
   "email":"jesusugazv@gmail.com",
   "license": "ISC",
   "bin": {
-    "commander-gulp-templates": "bin/templates.js"
+    "commander-gulp-templates": "./bin/templates.js"
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
@@ -30,7 +30,7 @@
     "deploy": "npm run templates && npm run styles && npm run images && npm run svg && gulp scripts",
     "images": "commander-gulp-images images \"frontend/src/static/images/**/*.png\" \"frontend/src/static/images/**/*.jpg\" --im \"docs/images\"",
     "predeploy": "rm -rdf \"docs/\" && mkdir -p \"docs/\"",
-    "preinstall": "node bin/pre-cli-templates.js",
+    "preinstall": "node ./bin/pre-cli-templates.js",
     "styles": "commander-gulp-styles scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles\"",
     "svg": "commander-gulp-images svg \"frontend/src/static/images/**/*.svg\" --sv \"docs/images/\"",
     "templates": "node ./bin/templates.js templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\" --t \"docs/\"",
@@ -39,6 +39,7 @@
     "watch-sass": "commander-gulp-watch w-scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --wscss \"docs/styles/\"",
     "watch-stylus": "commander-gulp-watch w-stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --wstyl \"docs/styles/\""
   },
+
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "directories": {
     "doc": "docs"
