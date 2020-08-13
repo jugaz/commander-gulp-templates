@@ -25,6 +25,6 @@ $ commander-gulp-templates templates 'entry' --t 'ouput'
 
 ```bash
  "scripts": {
-    "templates": "commander-gulp-templates templates 'test/templates/*.pug' 'test/**/*.pug' --t 'build/html'"
+    "templates": "commander-gulp-templates templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\" --t \"docs/\""
   }
 ```
