@@ -1,6 +1,6 @@
 {
   "name": "commander-gulp-templates",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "This project is created to compile html",
   "main": "./bin/templates.js",
   "author": "Jesús Antonio Ugaz Vegas",
