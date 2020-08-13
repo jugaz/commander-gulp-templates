@@ -5,7 +5,7 @@
   "main": "./bin/templates.js",
   "author": "Jesús Antonio Ugaz Vegas",
   "email":"jesusugazv@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "bin": {
     "commander-gulp-templates": "./bin/templates.js"
   },
