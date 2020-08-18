@@ -18,7 +18,7 @@ var options = {};
 /* ######################## VERSION ######################## */
 program
     .version(
-        'commander-gulp-templates version: ' + require('../../commander-gulp-templates2/package.json').version + '\n'
+        'commander-gulp-templates version: ' + require('../package.json').version + '\n'
     )
     .option('-m, --mkdirp <path>', 'create folder', createFolder)
     .option('-r, --rimraf <path>', 'delete folder', deleteFolder)
