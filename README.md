@@ -1,6 +1,6 @@
 # Commander Gulp Templates Dynamic
 
-<p>This project is created to compile html.</p>
+<p>Compilación de pug dinámicamente</p>
 
 ![commander: version (tag)](https://img.shields.io/badge/commander-v3.0.2-blue?style=for-the-badge)
 ![gulp: version (tag)](https://img.shields.io/badge/gulp-v3.9.1-orange?style=for-the-badge)
@@ -25,6 +25,6 @@ $ commander-gulp-templates templates 'entry' --t 'ouput'
 
 ```bash
  "scripts": {
-    "templates": "commander-gulp-templates templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\" --t \"docs/\""
+     "templates": "commander-gulp-templates templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\"  \"frontend/src/mail/**/*.pug\" \"frontend/src/mail/*.pug\" --t \"docs/\"",
   }
 ```

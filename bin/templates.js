@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 
 var
-    gulp = require('gulp'),
-    pug = require('gulp-pug'),
-    mkdirp = require('mkdirp'),
+    debug = require('gulp-debug'),
     program = require('commander'),
-    rimraf = require('rimraf'),
+    pug = require('gulp-pug'),
     util = require('gulp-util'),
-    debug = require('gulp-debug');
+    { src, dest, series, parallel } = require("gulp");
 
 
 
@@ -20,33 +18,6 @@ program
     .version(
         'commander-gulp-templates version: ' + require('../package.json').version + '\n'
     )
-    .option('-m, --mkdirp <path>', 'create folder', createFolder)
-    .option('-r, --rimraf <path>', 'delete folder', deleteFolder)
-
-
-/* ######################## CREATE FOLDERS ######################## */
-function createFolder(dir) {
-    mkdirp(dir, function (err) {
-        if (err) {
-            console.error(err)
-        } else {
-            console.log(dir)
-        }
-    })
-}
-
-
-/* ######################## DELETE FOLDERS ######################## */
-function deleteFolder(dir) {
-    rimraf(dir, function (err) {
-        if (err) {
-            console.error(err)
-        } else {
-            console.log(dir)
-        }
-    })
-}
-
 
 /* ######################## GULP TEMPLATES ######################## */
 // example node index.js templates 'templates/**/*.pug'  --t 'build/'
@@ -62,7 +33,7 @@ program
             }
 
         });
-        return gulp.src(input)
+        return src(input, { allowEmpty: true })
             .pipe(debug({
                 title: 'commader-gulp-templates:'
             }))
@@ -78,7 +49,7 @@ program
 
 
             })
-            .pipe(gulp.dest(ouput))
+            .pipe(dest(ouput))
             .on('end', function () {
                 util.log('Done!');
             });
