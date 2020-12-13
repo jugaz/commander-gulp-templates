@@ -4,7 +4,7 @@
   "description": "Compilación de pug dinámicamente",
   "main": "./bin/templates.js",
   "author": "Jesús Antonio Ugaz Vegas",
-  "email":"jesusugazv@gmail.com",
+  "email": "jesusugazv@gmail.com",
   "license": "MIT",
   "bin": {
     "commander-gulp-templates": "./bin/templates.js"
@@ -15,10 +15,10 @@
     "figlet": "^1.5.0",
     "graceful-fs": "^4.2.4",
     "gulp": "^4.0.2",
-    "gulp-pug-beautify": "^0.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-debug": "^4.0.0",
     "gulp-pug": "^4.0.1",
+    "gulp-pug-beautify": "^0.0.1",
     "gulp-util": "^3.0.8"
   },
   "scripts": {
@@ -44,7 +44,6 @@
     "commander-gulp-templates",
     "commander"
   ],
- 
   "bugs": {
     "url": "https://github.com/jugaz/commander-gulp-templates/issues"
   },
