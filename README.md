@@ -20,11 +20,15 @@ $ npm install commander-gulp-templates
 ```bash
 $ commander-gulp-templates templates 'entry' --t 'ouput' 
 ```
+```bash
+$ commander-gulp-templates prod:templates 'entry' --t 'ouput' 
+```
 
 #### Example
 
 ```bash
  "scripts": {
-     "templates": "commander-gulp-templates templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\"  \"frontend/src/mail/**/*.pug\" \"frontend/src/mail/*.pug\" --t \"docs/\"",
+    "templates": "commander-gulp-templates templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\"  \"frontend/src/mail/**/*.pug\" \"frontend/src/mail/*.pug\" --t \"docs/\"",
+    "prod:templates": "commander-gulp-templates prod:templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\"  \"frontend/src/mail/**/*.pug\" \"frontend/src/mail/*.pug\" --t \"docs/\"",
   }
 ```
