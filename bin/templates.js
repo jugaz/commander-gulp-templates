@@ -2,9 +2,9 @@
 
 var
     debug = require('gulp-debug'),
+    gulpPugBeautify = require('gulp-pug-beautify'),
     program = require('commander'),
     pug = require('gulp-pug'),
-    gulpPugBeautify = require('gulp-pug-beautify'),
     util = require('gulp-util'),
     { src, dest, series, parallel } = require("gulp");
 
