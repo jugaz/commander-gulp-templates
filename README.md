@@ -8,23 +8,26 @@
 ![npm: version (tag)](https://img.shields.io/badge/npm-v7.0.15-red?style=for-the-badge)
 ![node: version (tag](https://img.shields.io/badge/node-v15.4.0-green?style=for-the-badge)
 
-## Installation
+## Instalación
 
 ```bash
 $ npm install commander-gulp-templates
 ```
 
 
-#### Command to Compile
+#### Comando a ejecutar
 
+- Comando para Developer
 ```bash
 $ commander-gulp-templates templates 'entry' --t 'ouput' 
 ```
+
+- Comando para Producción
 ```bash
 $ commander-gulp-templates prod:templates 'entry' --t 'ouput' 
 ```
 
-#### Example
+#### Configuración por el package.json
 
 ```bash
  "scripts": {
