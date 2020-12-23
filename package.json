@@ -1,6 +1,6 @@
 {
   "name": "commander-gulp-templates",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Compilación de pug dinámicamente",
   "main": "./bin/templates.js",
   "author": "Jesús Antonio Ugaz Vegas",
@@ -19,7 +19,8 @@
     "gulp-debug": "^4.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-pug-beautify": "^0.0.1",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "path": "^0.12.7"
   },
   "scripts": {
     "preinstall": "node ./bin/pre-cli-templates.js"

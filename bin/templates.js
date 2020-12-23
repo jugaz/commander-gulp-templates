@@ -5,6 +5,7 @@ var
     gulpPugBeautify = require('gulp-pug-beautify'),
     program = require('commander'),
     pug = require('gulp-pug'),
+    path = require('path'),
     util = require('gulp-util'),
     { src, dest, series, parallel } = require("gulp");
 
@@ -29,7 +30,7 @@ program
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.t;
         input = input.filter(function (index, value) {
-            if (index.slice((index.lastIndexOf(".") - 1 >>> 0) + 2) == "pug") {
+            if (path.extname(index) == ".pug") {
                 return index;
             }
         });
@@ -60,7 +61,7 @@ program
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.t;
         input = input.filter(function (index, value) {
-            if (index.slice((index.lastIndexOf(".") - 1 >>> 0) + 2) == "pug") {
+            if (path.extname(index) == ".pug") {
                 return index;
             }
         });
