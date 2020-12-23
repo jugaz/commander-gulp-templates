@@ -1,6 +1,6 @@
 {
   "name": "commander-gulp-templates",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Compilación de pug dinámicamente",
   "main": "./bin/templates.js",
   "author": "Jesús Antonio Ugaz Vegas",
