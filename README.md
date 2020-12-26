@@ -35,3 +35,5 @@ $ commander-gulp-templates prod:templates 'entry' --t 'ouput'
     "prod:templates": "commander-gulp-templates prod:templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\"  \"frontend/src/mail/**/*.pug\" \"frontend/src/mail/*.pug\" --t \"docs/\"",
   }
 ```
+### Link
+https://jugaz.github.io/commander-gulp-templates/

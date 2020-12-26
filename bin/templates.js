@@ -29,9 +29,16 @@ program
     .action((input, options) => {
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.t;
+        function error(){
+            util.log("ERROR: No es extisión válida")
+            util.log("ERROR: La extisión válida debe ser: '.pug'")
+        }
         input = input.filter(function (index, value) {
             if (path.extname(index) == ".pug") {
                 return index;
+            }
+            else if (path.extname(index) != ".pug") {
+                return error();
             }
         });
         return src(input, { allowEmpty: true })
@@ -60,9 +67,16 @@ program
     .action((input, options) => {
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.t;
+        function error(){
+            util.log("ERROR: No es extisión válida")
+            util.log("ERROR: La extisión válida debe ser: '.pug'")
+        }
         input = input.filter(function (index, value) {
             if (path.extname(index) == ".pug") {
                 return index;
+            }
+            else if (path.extname(index) != ".pug") {
+                return error();
             }
         });
         return src(input, { allowEmpty: true })
